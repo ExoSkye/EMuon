@@ -1,8 +1,16 @@
-mod memory;
-mod decoder;
-mod framebuffer;
+#![allow(non_snake_case)]
+#![allow(dead_code)]
+
+pub mod common;
+pub mod ast;
+pub mod state;
+pub mod memory;
+pub mod framebuffer;
+pub mod stack;
+
+use state::State;
 
 fn main() {
-    let mut memory = memory::Memory::new();
-    memory.lock().unwrap().write(0x200, 0x12);
+    let mut state = State::new();
+    
 }

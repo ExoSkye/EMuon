@@ -1,6 +1,7 @@
 use std::sync::{Arc, Mutex};
 
-pub(crate) struct Memory {
+#[derive(Debug, Clone)]
+pub struct Memory {
     data: [u8; 4096],
 }
 
